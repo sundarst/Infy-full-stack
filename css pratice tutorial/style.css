@@ -1,0 +1,84 @@
+/*.one{
+    color: red;
+}
+#one
+{
+    color: blue;
+}
+
+Universal Selector
+*{
+    color: red;
+}
+ box model ex 1
+div{
+    background-color: red;
+    padding: 50px;
+    width: 150px;
+    height: 250px;  
+}
+.two
+{
+    background-color: red;
+    padding: 50px;
+    margin-top: 200px;
+    height: 50px;
+}
+box model ex 2
+div
+{
+    background-color: black;
+    width: 450px;
+    height: 400px;
+}
+div p 
+{
+    color: white;
+    padding-top:  70px;
+    padding-left: 100px;
+    
+}
+box model ex 3
+div{
+    background-color: black;
+    width: 350px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border: solid rgb(247, 13, 13) 20px;
+}
+
+div{
+    background-color: black;
+    color: yellow;
+    text-align: center;
+    padding-top: 20px;
+    height: 150px;
+}
+.box2
+{
+  background-color: lightgray;
+  margin-top: 20px ;
+  border-color: black;
+  padding-left: 20px;
+  border-width: 15px;
+   border-style: solid;
+   color: black;
+}
+
+h1
+{
+    display: inline;
+    background-color: blueviolet;
+}
+p
+{
+ background-color: blue;
+}
+div{
+    display: inline-block;
+    background-color: pink;
+    width: 500px;
+    height: 200px;
+}
+*/
