@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cotainer">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="YOUR NAME" required>
+            <input type="email" id="email" placeholder="EMAIL ID" required>
+            <input type="text"  id="Phone" placeholder="Phone Number" required>
+            <textarea id="message" rows="4" placeholder="How can we help you"></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script type="text/javascript">
+        function sendEmail() {
+          Email.send({
+            Host: "smtp.gmail.com",
+            Username: "shunmugasundaram0707@gmail.com",
+            Password: "Enter your password",
+            To: 'shunmugasundaram117@gmail.com',
+            From: document.getElementById("email").value,
+            Subject: "Sending Email using javascript",
+            Body: "Well that was easy!!",
+          })
+            .then(function (message) {
+              alert("mail sent successfully")
+            });
+        }
+      </script>
+</body>
+</html>
