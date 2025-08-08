@@ -1,0 +1,117 @@
+*
+{
+    margin:0%;
+    padding: 0%;
+}
+.container
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img-new.png);
+    background-size: cover;
+    background-position: center;
+    position:absolute;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.navbar
+{ 
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.log-img
+{
+    width: 160px;
+    cursor: pointer;
+}
+.cart-img
+{
+    width: 40px;
+    cursor: pointer;
+}
+ nav
+{
+    flex: 1;
+    padding-left: 60px;
+    
+}
+nav ul li
+{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px; 
+     
+}
+nav ul li a
+{
+ text-decoration: none;
+}
+
+.content h1
+{
+    font-size: 60px;
+    font-weight: 100;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: rgb(161, 164, 164);
+    
+}
+.content p
+{
+  font-size: 14px;
+  color:rgb(242, 245, 245) ;
+}
+.content
+{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.content a
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(  45deg,#eb4444 , #ececec);
+    box-shadow: 3px 8px 22px #fd2b2b;
+    border-radius: 6px;
+    position: relative;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.arrow-icon
+{
+    margin-top: 20px;
+    margin-left: 120px;
+    display: flex;
+}
+.arrow
+{
+    width: 45px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.img-web
+{
+    height: 90%;
+    right: 180px;
+    bottom: 0;
+    position: absolute;
+}
+.social-link
+{
+    transform: rotate(-90deg);
+    left: -80px;
+    bottom: 180px;
+    position: absolute;
+
+}
+.social-link a
+{
+    font-size: 16px;
+    color: #eb4444;
+    padding-right: 20px;
+    text-decoration: none;
+}
