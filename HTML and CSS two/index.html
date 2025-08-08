@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+          <div class="button-btn">
+            <div id="btn"></div>
+            <button type="button" class="toggel-btn" onclick="login()">Login</button>
+            <button type="button" class="toggel-btn" onclick="register()">Register</button>
+          </div>
+          <div class="social-meda">
+            <img src="fb.png">
+            <img src="tw.png">
+            <img src="gp.png">
+          </div>
+          <form id="login" class="input-group" onsubmit="return loginUser()">
+              <input type="text" id="loginUserId" class="input-field" placeholder="User Id" required>
+              <input type="password" id="loginPassword" class="input-field" placeholder="Password" required>
+              <input type="checkbox" class="check-box"><span>Remember me</span>
+              <button type="submit" class="log-btn">Login</button>
+          </form>
+          <form id="register" class="input-group" onsubmit="return registerUser()">
+              <input type="text" id="registerUserId" class="input-field" placeholder="User Id" required>
+              <input type="password" id="registerPassword" class="input-field" placeholder="Enter password" required>
+              <input type="email" id="registerEmail" class="input-field" placeholder="Enter email id" required>
+              <input type="checkbox" class="check-box" required><span>I agree terms & conditions</span>
+              <button type="submit" class="log-btn">Register</button>
+          </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+        function registerUser() {
+            var userId = document.getElementById("registerUserId").value;
+            var password = document.getElementById("registerPassword").value;
+            var email = document.getElementById("registerEmail").value;
+
+            // Store user data (you can use localStorage or send to a server)
+            localStorage.setItem("userId", userId);
+            localStorage.setItem("password", password);
+            localStorage.setItem("email", email);
+
+            alert("Registration successful!");
+
+            // Reset form fields
+            document.getElementById("register").reset();
+
+            return false; // Prevent form submission
+        }
+
+        function loginUser() {
+            var userId = document.getElementById("loginUserId").value;
+            var password = document.getElementById("loginPassword").value;
+
+            // Retrieve user data from localStorage
+            var storedUserId = localStorage.getItem("userId");
+            var storedPassword = localStorage.getItem("password");
+
+            if (userId === storedUserId && password === storedPassword) {
+                alert("Login successful!");
+
+                // Redirect to the dashboard page
+                window.location.href = "dashboard.html";
+            } else {
+                alert("Invalid credentials. Please try again.");
+            }
+
+            // Reset form fields
+            document.getElementById("login").reset();
+
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>
